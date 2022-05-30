@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Topsicle", sans-serif;
+  /* font-family: "Pixel-Art", sans-serif; */
+  transition: 225ms;
+  backface-visibility: hidden;
+}
+
+body {
+  background-color: #110b1d;
+}
+
+.container {
+  background: url("https://wallpaperaccess.com/full/2825704.gif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 1024px;
+  height: 100vh;
+  min-height: 900px;
+}
+
+.form {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-200px, -200px);
+  width: 500px;
+  height: auto;
+  border: 4px solid #18a3f1;
+  background-color: rgba(24, 163, 241, 0.5);
+  border-radius: 3px;
+  box-shadow: rgba(24, 163, 241, 0.4) -5px 5px;
+}
+
+.form:hover {
+  top: calc(40% + 3px);
+  left: calc(30% + 3px);
+}
+
+.blur {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(1px);
+  height: 100%;
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.form:hover .blur {
+  backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 500px) {
+  .form {
+    width: 100%;
+  }
+}
+
+.form:hover {
+  box-shadow: rgba(24, 163, 241, 0.4) -5px 5px,
+    rgba(24, 163, 241, 0.3) -10px 10px, rgba(24, 163, 241, 0.2) -15px 15px,
+    rgba(24, 163, 241, 0.1) -20px 20px, rgba(24, 163, 241, 0.05) -25px 25px;
+  background-color: rgba(24, 163, 241, 0.6);
+}
+
+.form-title {
+  color: rgb(230, 230, 230);
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.form-content {
+  margin-top: 20px;
+}
+
+.form-content-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.form-content-group-input {
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+.form-content-group-label {
+  position: absolute;
+  bottom: 9px;
+  left: 5px;
+  color: rgb(195, 195, 195);
+  width: 90%;
+  font-size: 20px;
+}
+
+.form-content-group-label::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: rgb(24, 163, 241);
+  bottom: -20px;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(33, 107, 95, 1) 0%,
+    rgba(24, 163, 241, 1) 35%,
+    rgba(33, 107, 95, 1) 100%
+  );
+  border-radius: 100%;
+}
+
+.form-content-group-input {
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 10px 5px;
+  position: relative;
+  padding-left: 110px;
+  padding: 10px 0 10px 110px;
+  text-shadow: 1px -2px 0px rgb(24, 163, 241);
+  color: #151515;
+}
+
+.form-content-group-input::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: rgb(24, 163, 241);
+  bottom: 0;
+  left: 0;
+}
+
+.form-content-group:hover .form-content-group-label {
+  left: 0;
+  font-size: 20px;
+}
+
+.form-forgot {
+  width: 100%;
+  text-align: right;
+  text-shadow: 1px -2px 0px rgb(24, 163, 241);
+  color: #151515;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: 900;
+}
+
+.btn {
+  transition: 225ms;
+  width: 100%;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(24, 163, 241, 0.1) 0%,
+    rgba(24, 163, 241, 0.2) 10%,
+    rgba(24, 163, 241, 0.4) 20%,
+    rgba(24, 163, 241, 0.6) 30%,
+    rgba(24, 163, 241, 0.8) 40%,
+    rgba(24, 163, 241, 1) 50%,
+    rgba(24, 163, 241, 0.8) 60%,
+    rgba(24, 163, 241, 0.6) 70%,
+    rgba(24, 163, 241, 0.4) 80%,
+    rgba(24, 163, 241, 0.2) 90%,
+    rgba(24, 163, 241, 0.1) 100%
+  );
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border: none;
+  margin: 20px 0;
+  border: 1px solid rgba(24, 163, 241, 0.4);
+  box-shadow: inset -1px 1px 20px 0px rgba(24, 163, 241, 0.4);
+}
+
+.btn:hover {
+  border: 1px solid rgb(24, 163, 241);
+  box-shadow: inset -1px 1px 20px 0px white;
+}
+
+.form-member {
+  width: 100%;
+  color: rgb(216, 216, 216);
+}
+.form-member-normal {
+  text-shadow: 1px -2px 0px rgb(24, 163, 241);
+  color: #151515;
+}
+
+.form-content-group:hover .form-content-group-label::after {
+  background: rgb(24, 163, 241);
+}
