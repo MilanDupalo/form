@@ -18,7 +18,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 1024px;
+  width: 100%;
   height: 100vh;
   min-height: 900px;
 }
@@ -39,6 +39,19 @@ body {
 .form:hover {
   top: calc(40% + 3px);
   left: calc(30% + 3px);
+}
+
+@media (max-width: 510px) {
+  .form {
+    top: 100px;
+    left: 0;
+    transform: none;
+    width: 100%;
+  }
+  .form:hover {
+    top: 100px;
+    left: 0;
+  }
 }
 
 .blur {
@@ -157,7 +170,7 @@ body {
 .btn {
   transition: 225ms;
   width: 100%;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   background: linear-gradient(
     90deg,
     rgba(24, 163, 241, 0.1) 0%,
@@ -185,7 +198,8 @@ body {
 
 .btn:hover {
   border: 1px solid rgb(24, 163, 241);
-  box-shadow: inset -1px 1px 20px 0px white;
+  box-shadow: inset -1px 1px 20px 0px rgba(24, 163, 241, 1);
+  color: white;
 }
 
 .form-member {
